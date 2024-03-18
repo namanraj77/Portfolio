@@ -12,6 +12,19 @@ html,body{
   position: relative;
   overflow: hidden;
 }
+#cursor{ 
+  /* custom cursor */
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  position: fixed; 
+  /* position fixed hai kyonki sara kam JS mein hoga */
+  z-index: 1000;
+  transition: all linear 0.1s;
+  mix-blend-mode:difference ;
+
+}
 #page1{
   background-color: rgba(7, 6, 6, 0.912);
   min-height: 100vh;
@@ -75,7 +88,10 @@ html,body{
   color: black;
 
 }
-
+#nav-part2 i{
+  display: none;
+  color: white;
+}
 
 #center{
   display: flex;
@@ -171,6 +187,7 @@ span{
 #content{
   position: relative;
   color: white;
+ 
   
 }
 #content h1{
@@ -186,6 +203,7 @@ span{
   margin-right: 70px;
   margin-top: 65px;
   text-align: center;
+   text-align: left;
 }
 #image{
   height: 400px;
@@ -203,6 +221,17 @@ span{
 
 }
 @media (max-width:600px) {
+  i{
+    display: block;
+  }
+  #nav-part2{
+
+    display: none;
+  }
+  #nav-part2 i{
+    display: block;
+    color: white;
+  }
   #page1{
     height: 100%;
     width: 100%;
@@ -247,7 +276,7 @@ span{
     flex-wrap: wrap;
   }
   #page2-left{
-    height: 75vh;
+    height: 100vh;
     width: 100%;
   }
   #content {
@@ -257,26 +286,28 @@ span{
   #content h1 {
     font-size: 10vw; /* Adjust font size for smaller screens */
     margin-top: 20px; /* Adjust margin-top for smaller screens */
-    margin-bottom: 19px; /* Adjust margin-bottom for smaller screens */
+    margin-bottom: 15px;
+    padding-bottom: 10px; /* Adjust margin-bottom for smaller screens */
   }
 
   #content p {
-    font-size: 4vw; /* Adjust font size for smaller screens */
-    margin-top: 10px; /* Adjust margin-top for smaller screens */
-    margin-bottom: 10px; /* Adjust margin-bottom for smaller screens */
+    font-size: 6vw; /* Adjust font size for smaller screens */
+    margin-top: 15px; /* Adjust margin-top for smaller screens */
+    margin-bottom: 5px; /* Adjust margin-bottom for smaller screens */
     text-align: left;
     width: 80%;
-    margin-right: 10px;
-    line-height: 27px;
+    margin-right: 13px;
+    line-height: 35px;
+    padding-right: 8px;
+    padding-top: 10px;
+    padding-right: 13px;
   }
   
   #page2-right{
-    height: 25vh;
+    height: 0vh;
     width: 100%;
   }
   #page2-right img{
-    height: 200px;
-    width: 200px;
-    margin-bottom: 50px;
+    display: none;
   }
 }
